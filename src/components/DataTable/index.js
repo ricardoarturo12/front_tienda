@@ -89,6 +89,7 @@ function DataTable({ data, filter }) {
         { field: 'precio', type: 'number', headerName: 'Precio', width: 95 },
         { field: 'empresa', headerName: 'Empresa', width: 100 },
         { field: 'existencia', type: 'number', headerName: 'Stock', width: 50 },
+        { field: 'url', headerName: 'Link', width: 100 }
     ];
     return (
     <div style={{ height: 650, width: 950, paddingTop: '20px' }}>
