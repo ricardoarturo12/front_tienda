@@ -87,11 +87,11 @@ function DataTable({ data, filter }) {
     const columns = [
         { field: 'nombre', headerName: 'Nombre', width: 500 },
         { field: 'precio', type: 'number', headerName: 'Precio', width: 95 },
-        { field: 'empresa', headerName: 'Empresa', width: 80 },
+        { field: 'empresa', headerName: 'Empresa', width: 100 },
         { field: 'existencia', type: 'number', headerName: 'Stock', width: 50 },
     ];
     return (
-    <div style={{ height: 630, width: 730, paddingTop: '20px' }}>
+    <div style={{ height: 650, width: 950, paddingTop: '20px' }}>
 
         <StyledDataGrid
             pageSize={10}
