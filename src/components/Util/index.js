@@ -6,7 +6,17 @@ function Util() {
 
     const getData = async () => {
       try {
-        const response = await fetch('api/v1/products')
+        const response = await fetch('api/v1/products', {
+          'mode': 'no-cors',
+          'method': 'GET',
+          'cache': 'no-cache',
+          'credentials': 'include',
+          "sec-fetch-mode": "navigate",
+          'headers': {
+              "Access-Control-Allow-Headers" : "Content-Type",
+              'Access-Control-Allow-Origin': '*'
+              }
+      })
         if (response.ok) {
           const json = await response.json()
           setData(json)
