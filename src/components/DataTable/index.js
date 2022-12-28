@@ -9,6 +9,8 @@ import {
 import { styled } from '@mui/material/styles';
 import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
+import Link from "@mui/material//Link";
+
 
 const StyledDataGrid = styled(DataGrid)(({ theme }) => ({
     border: 0,
@@ -89,7 +91,14 @@ function DataTable({ data, filter }) {
         { field: 'precio', type: 'number', headerName: 'Precio', width: 95 },
         { field: 'empresa', headerName: 'Empresa', width: 100 },
         { field: 'existencia', type: 'number', headerName: 'Stock', width: 50 },
-        { field: 'url', headerName: 'Link', width: 100 }
+        {
+            field: "url",
+            headerName: "Link",
+            width: 190,
+            renderCell: (params) => (
+              <Link href={params.value} target="_blank">{params.value}</Link>
+            )
+          }
     ];
     return (
     <div style={{ height: 650, width: 950, paddingTop: '20px' }}>
